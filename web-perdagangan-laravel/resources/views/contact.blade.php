@@ -30,7 +30,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    loading...
                 </div>
             </div>
         </div>
@@ -50,31 +50,10 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">  
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">shop</a></li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li class="hot"><a href="#">Latest</a>
-                                        <ul class="submenu">
-                                            <li><a href="shop.html"> Product list</a></li>
-                                            <li><a href="product_details.html"> Product Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="elements.html">Element</a></li>
-                                            <li><a href="confirmation.html">Confirmation</a></li>
-                                            <li><a href="checkout.html">Product Checkout</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{url('/')}}">Home</a></li>
+                                    <li><a href="{{url('/shop')}}">shop</a></li>
+                                    <li><a href="{{url('/about')}}">about</a></li>
+                                    <li><a href="{{url('/contact')}}">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -101,95 +80,69 @@
         <!-- Header End -->
     </header>
     <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>About Us</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End-->
-        <!-- About Details Start -->
-        <div class="about-details section-padding30">
+        <!-- ================ contact section start ================= -->
+        <section class="contact-section">
             <div class="container">
                 <div class="row">
-                    <div class="offset-xl-1 col-lg-8">
-                        <div class="about-details-cap mb-50">
-                            <h4>Our Mission</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                            </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
-                        </div>
-
-                        <div class="about-details-cap mb-50">
-                            <h4>Our Vision</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                            </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
-                        </div>
+                    <div class="col-12">
+                        <h2 class="contact-title">Get in Touch</h2>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- About Details End -->
-        <!--? Video Area Start -->
-        <div class="video-area mb-100">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                    <div class="video-wrap">
-                        <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                            </div>
+                        </form>
                     </div>
-                    </div>
-                </div>
-                <!-- Arrow -->
-                <div class="thumb-content-box">
-                    <div class="thumb-content">
-                        <h3>Next Video</h3>
-                        <a href="#"> <i class="flaticon-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Video Area End -->
-       <!--? Shop Method Start-->
-        <div class="shop-method-area">
-            <div class="container">
-                <div class="method-wrapper">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-package"></i>
-                                <h6>GRATIS ongkir</h6>
-                                <p>Pengiriman Produk kami tidak memerlukan biaya tambahan</p>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>Buttonwood, California.</h3>
+                                <p>Rosemead, CA 91770</p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-unlock"></i>
-                                <h6>Sistem Pembayaran yang aman</h6>
-                                <p>Kami menjamin Pembayaran yang anda lakukan di website kami</p>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>+1 253 565 2365</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
                             </div>
-                        </div> 
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-reload"></i>
-                                <h6>Melayani Penukaran Barang</h6>
-                                <p>jika Anda merasa barang yang anda dapatkan tidak sama dengan yang dipesan kami siap melayani penukaran barang</p>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>support@colorlib.com</h3>
+                                <p>Send us your query anytime!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Shop Method End-->
+        </section>
+        <!-- ================ contact section end ================= -->
     </main>
     <footer>
         <!-- Footer Start-->

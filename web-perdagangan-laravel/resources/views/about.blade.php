@@ -30,7 +30,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    loading...
                 </div>
             </div>
         </div>
@@ -50,31 +50,10 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">  
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">shop</a></li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li class="hot"><a href="#">Latest</a>
-                                        <ul class="submenu">
-                                            <li><a href="shop.html"> Product list</a></li>
-                                            <li><a href="product_details.html"> Product Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="elements.html">Element</a></li>
-                                            <li><a href="confirmation.html">Confirmation</a></li>
-                                            <li><a href="checkout.html">Product Checkout</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{{url('/')}}">Home</a></li>
+                                    <li><a href="{{url('/shop')}}">shop</a></li>
+                                    <li><a href="{{url('/about')}}">about</a></li>
+                                    <li><a href="{{url('/contact')}}">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -101,21 +80,6 @@
         <!-- Header End -->
     </header>
     <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>About Us</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End-->
         <!-- About Details Start -->
         <div class="about-details section-padding30">
             <div class="container">
@@ -139,26 +103,6 @@
             </div>
         </div>
         <!-- About Details End -->
-        <!--? Video Area Start -->
-        <div class="video-area mb-100">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                    <div class="video-wrap">
-                        <div class="play-btn "><a class="popup-video" href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a></div>
-                    </div>
-                    </div>
-                </div>
-                <!-- Arrow -->
-                <div class="thumb-content-box">
-                    <div class="thumb-content">
-                        <h3>Next Video</h3>
-                        <a href="#"> <i class="flaticon-arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Video Area End -->
        <!--? Shop Method Start-->
         <div class="shop-method-area">
             <div class="container">
