@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', [JamController::class, 'index']);
+Route::get('/dashboard/tambah', [JamController::class, 'create']);
+Route::post('/dashboard/tambah/proses', [JamController::class, 'store'])->name('proses_tambah');
+Route::get('/dashboard/edit/{id}', [JamController::class, 'edit']);
+Route::patch('/dashboard/update/{id}', [JamController::class, 'update'])->name('proses_update');
+Route::get('/dashboard/delete/{id}', [JamController::class, 'destroy']);
