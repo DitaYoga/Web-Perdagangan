@@ -16,6 +16,7 @@ use App\Http\Controllers\BerandaController;
 */
 
 Route::get('/',[BerandaController::class, 'index']);
+Route::get('shop',[BerandaController::class,'shop']);
 
 
 

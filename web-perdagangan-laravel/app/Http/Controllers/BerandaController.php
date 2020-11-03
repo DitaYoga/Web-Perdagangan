@@ -13,4 +13,8 @@ class BerandaController extends Controller
 		$jam= Jam::latest()->get();
         return view('welcome', ['jam'=> $jam]);
 	}
+	public function shop(){
+		$jam= Jam::latest()->paginate(5);
+        return view('belanja', ['jam'=> $jam]);
+	}
 }

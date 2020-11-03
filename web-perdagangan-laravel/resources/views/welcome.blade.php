@@ -108,7 +108,7 @@
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tang di website kami harganya murah dan kulitas dunia dijamin puas</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Belanja Sekarang</a>
+                                        <a href="shop" class="btn hero-btn">Belanja Sekarang</a>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tang di website kami harganya murah dan kulitas dunia dijamin puas</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                        <a href="shop" class="btn hero-btn">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -414,7 +414,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do eiusmod tem.</p>
+                                        <p>Hmmm..... <br> Pokoknya ami adalah kelompok web perdagangan</p>
                                 </div>
                                 </div>
                             </div>
@@ -436,12 +436,12 @@
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>New Products</h4>
+                                <h4>Jam Terbaru</h4>
                                 <ul>
-                                    <li><a href="#">Woman Cloth</a></li>
-                                    <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#"> Man Accessories</a></li>
-                                    <li><a href="#"> Rubber made Toys</a></li>
+                                <?php for ($k=0; $k < 3; $k++) { 
+                                ?>
+                                    <li><a href="#">{{$jam[$k]->nama}}</a></li>
+                                <?php } ?>
                                 </ul>
                             </div>
                         </div>
