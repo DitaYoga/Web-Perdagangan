@@ -50,8 +50,8 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">  
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">shop</a></li>
+                                    <li><a href="{{url('/')}}">Home</a></li>
+                                    <li><a href="{{url('/shop')}}">shop</a></li>
                                     <li><a href="about.html">about</a></li>
                                     <li class="hot"><a href="#">Latest</a>
                                         <ul class="submenu">
@@ -105,7 +105,7 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Pilih Jam Tangannya Bos</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tang di website kami harganya murah dan kulitas dunia dijamin puas</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tangan di website kami harganya murah dan kulitas dunia dijamin puas</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="shop" class="btn hero-btn">Belanja Sekarang</a>
@@ -127,10 +127,10 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Pilih Jam Tangannya Bos</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tang di website kami harganya murah dan kulitas dunia dijamin puas</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tangan di website kami harganya murah dan kulitas dunia dijamin puas</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="shop" class="btn hero-btn">Shop Now</a>
+                                        <a href="shop" class="btn hero-btn">Belanja Sekarang</a>
                                     </div>
                                 </div>
                             </div>
@@ -216,8 +216,8 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
-                            <h2>Popular Items</h2>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                            <h2>Item Populer</h2>
+                            <p>Beriku adalah daftar jam yang paling diminati di website kami</p>
                         </div>
                     </div>
                 </div>
@@ -328,7 +328,7 @@
                 <!-- Button -->
                 <div class="row justify-content-center">
                     <div class="room-btn pt-70">
-                        <a href="catagori.html" class="btn view-btn1">View More Products</a>
+                        <a href="shop" class="btn view-btn1">Lihat Lebih Banyak</a>
                     </div>
                 </div>
             </div>
@@ -376,22 +376,22 @@
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
                                 <i class="ti-package"></i>
-                                <h6>Free Shipping Method</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                                <h6>GRATIS ongkir</h6>
+                                <p>Pengiriman Produk kami tidak memerlukan biaya tambahan</p>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
                                 <i class="ti-unlock"></i>
-                                <h6>Secure Payment System</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                                <h6>Sistem Pembayaran yang aman</h6>
+                                <p>Kami menjamin Pembayaran yang anda lakukan di website kami</p>
                             </div>
                         </div> 
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
                                 <i class="ti-reload"></i>
-                                <h6>Secure Payment System</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                                <h6>Melayani Penukaran Barang</h6>
+                                <p>jika Anda merasa barang yang anda dapatkan tidak sama dengan yang dipesan kami siap melayani penukaran barang</p>
                             </div>
                         </div>
                     </div>
@@ -414,7 +414,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Hmmm..... <br> Pokoknya ami adalah kelompok web perdagangan</p>
+                                        <p>Hmmm..... <br> Pokoknya kami adalah kelompok web perdagangan</p>
                                 </div>
                                 </div>
                             </div>
@@ -474,9 +474,9 @@
                         <div class="footer-copy-right f-right">
                             <!-- social -->
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
+                                <a href="https://instagram.com/erx.tuadi" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://wa.me/+6289697448955" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                 <a href="#"><i class="fas fa-globe"></i></a>
                             </div>
                         </div>
