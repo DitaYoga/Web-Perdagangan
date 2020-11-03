@@ -4,43 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Document</title>
 </head>
 <body>
+    <br></br>
+    <h1 class="display-4 center">Tambah</h1>
+    <div class="container">
     <form action="{{route('proses_tambah')}}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
-        <table>
-            <tr>
-                <th style="text-align: left">Nama</th>
-                <td>:</td>
-                <td><input type="text" name="nama"></td>
-            </tr>
-            <tr>
-                <th style="text-align: left">Gambar</th>
-                <td>:</td>
-                <td><input type="file" name="gambar"></td>
-            </tr>
-            <tr>
-                <th style="text-align: left">Deskripsi</th>
-                <td>:</td>
-                <td><textarea name="deskripsi" cols="30" rows="10"></textarea></td>
-            </tr>
-            <tr>
-                <th style="text-align: left">Harga</th>
-                <td>:</td>
-                <td><input type="number" name="harga"></td>
-            </tr>
-            <tr>
-                <th style="text-align: left">Stok</th>
-                <td>:</td>
-                <td><input type="number" name="stok"></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td></td>
-                <td><button type="submit">Submit</button></td>
-            </tr>
-        </table>
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" name="nama" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Gambar</label>
+            <input type="file" name="gambar" class="form-control-file">
+        </div>
+        <div class="form-group">
+            <label>Deskripsi</label>
+            <textarea type="text" name="deskripsi" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Harga</label>
+            <input type="number" name="harga" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Stok</label>
+            <input type="number" name="stok" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-dark">Kirim</button>
     </form>
+    </div>
 </body>
 </html>
