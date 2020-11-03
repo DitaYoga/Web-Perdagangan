@@ -105,10 +105,10 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Pilih Jam Tangannya Bos</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tang di website kami harganya murah dan kulitas dunia dijamin puas</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                        <a href="industries.html" class="btn hero-btn">Belanja Sekarang</a>
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Pilih Jam Tangannya Bos</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Masak Jaman Sekarang nggak punya jam tangan, ayo dong beli jam tang di website kami harganya murah dan kulitas dunia dijamin puas</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="industries.html" class="btn hero-btn">Shop Now</a>
@@ -152,44 +152,26 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="section-tittle mb-70">
-                            <h2>New Arrivals</h2>
+                            <h2>Jam Tangan Terbaru</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
+                   <?php 
+                        for ($i=0; $i < 3; $i++) { 
+                    ?>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="assets/img/gallery/new_product1.png" alt="">
+                                <img src="{{ asset('/image/'.$jam[$i]->gambar) }}" height="360px" alt="">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
+                                <h3><a href="product_details.html">{{$jam[$i]->nama}}</a></h3>
+                                <span>Rp {{ $jam[$i]->harga }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product2.png" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product3.png" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
+                <?php } ?>
                 </div>
             </div>
         </section>
@@ -428,7 +410,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html"><p>KLMPK Perdagangan</p></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -467,12 +449,13 @@
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Team</h4>
+                                <h4>Tim</h4>
                                 <ul>
                                     <li><a href="#">I Putu Adi Perdana Utama</a></li>
-                                    <li><a href="#">Siapa kaden</a></li>
-                                    <li><a href="#">Next</a></li>
-                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">I Made Dita Yoga Radia</a></li>
+                                    <li><a href="#">I Made Adi Wira Surya Kencana</a></li>
+                                    <li><a href="#">I Putu Ditya Purnama Putra</a></li>
+                                    <li><a href="#">I Gede Winkayana</a></li>
                                 </ul>
                             </div>
                         </div>
