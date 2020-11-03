@@ -512,6 +512,7 @@
             </form>
         </div>
     </div>
+    <div></div>
     <!-- Search model end -->
 
     <!-- JS here -->
