@@ -44,7 +44,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="{{ url('/')}}"><img src="assets/img/logo/logo.jpg" height="25px" width="135px" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -145,7 +145,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><p>KLMPK Perdagangan</p></a>
+                                    <a href="{{ url('/')}}"><img src="assets/img/logo/logo.jpg" height="25px" width="135px" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -160,10 +160,10 @@
                             <div class="footer-tittle">
                                 <h4>Quick Links</h4>
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="#">  Contact Us</a></li>
+                                    <li><a href="{{ url('/') }}">Home</a></li>
+                                    <li><a href="{{ url('/shop') }}"> Shop</a></li>
+                                    <li><a href="{{ url('/about') }}"> About</a></li>
+                                    <li><a href="{{ url('/contact') }}">  Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -186,11 +186,12 @@
                             <div class="footer-tittle">
                                 <h4>Tim</h4>
                                 <ul>
-                                    <li><a href="#">I Putu Adi Perdana Utama</a></li>
-                                    <li><a href="#">I Made Dita Yoga Radia</a></li>
-                                    <li><a href="#">I Made Adi Wira Surya Kencana</a></li>
-                                    <li><a href="#">I Putu Ditya Purnama Putra</a></li>
-                                    <li><a href="#">I Gede Winkayana</a></li>
+                                    <li><a href="https://instagram.com/erx.tuadi" target="_blank">I Putu Adi Perdana Utama</a></li>
+                                    <li><a href="https://instagram.com/dittayoga" target="_blank">I Made Dita Yoga Radia</a></li>
+                                    <li><a href="https://instagram.com/erx.surya" target="_blank">I Made Adi Wira Surya Kencana</a></li>
+                                    <li><a href="https://instagram.com/" target="_blank">I Putu Ditya Purnama Putra</a></li>
+                                    <li><a href="https://instagram.com/winka_bob" target="_blank">I Gede Winkayana</a></li>
+                                    <li><a href="https://instagram.com/erx.aldi" target="_blank">Aldi Suryanto</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -14,3 +14,26 @@
 {
 	width: 80%;
 }
+.product-caption{
+	height: 30px;
+}
+.product-caption h3{
+    text-overflow: ellipsis;  
+    overflow: hidden; 
+    white-space: nowrap;
+    width: 100%; 
+
+}
+.popular-caption{
+	height: 20px;
+}
+.popular-caption h3 {
+    text-overflow: ellipsis;  
+    overflow: hidden; 
+    white-space: nowrap;
+    width: 100%; 
+}
+.row .col-xl-4{
+	margin-bottom: 30px;
+}
+}

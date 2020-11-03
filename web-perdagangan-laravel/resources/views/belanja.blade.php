@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
 </head>
 
 <body>
@@ -44,7 +45,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="{{ url('/')}}"><img src="assets/img/logo/logo.jpg" height="25px" width="135px" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -126,10 +127,11 @@
                     <!-- Card two -->
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div class="row">
+                            @foreach($jammurah as $jmurah)
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
-                                        <img src="assets/img/gallery/popular1.png" alt="">
+                                        <img src="{{ asset('/image/'.$jmurah->gambar) }}" height="380px" alt="">
                                         <div class="img-cap">
                                             <span>Add to cart</span>
                                         </div>
@@ -138,96 +140,12 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
+                                        <h3><a href="product_details.html">{{$jmurah->nama}}</a></h3>
+                                        <span>Rp {{ $j->harga }}</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="assets/img/gallery/popular2.png" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="assets/img/gallery/popular3.png" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="assets/img/gallery/popular4.png" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="assets/img/gallery/popular5.png" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="assets/img/gallery/popular6.png" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <!-- Card three -->
@@ -384,7 +302,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><p>KLMPK Perdagangan</p></a>
+                                    <a href="{{ url('/')}}"><img src="assets/img/logo/logo.jpg" height="25px" width="135px" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
@@ -399,10 +317,10 @@
                             <div class="footer-tittle">
                                 <h4>Quick Links</h4>
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="#">  Contact Us</a></li>
+                                    <li><a href="{{ url('/') }}">Home</a></li>
+                                    <li><a href="{{ url('/shop') }}"> Shop</a></li>
+                                    <li><a href="{{ url('/about') }}"> About</a></li>
+                                    <li><a href="{{ url('/contact') }}">  Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -425,11 +343,12 @@
                             <div class="footer-tittle">
                                 <h4>Tim</h4>
                                 <ul>
-                                    <li><a href="#">I Putu Adi Perdana Utama</a></li>
-                                    <li><a href="#">I Made Dita Yoga Radia</a></li>
-                                    <li><a href="#">I Made Adi Wira Surya Kencana</a></li>
-                                    <li><a href="#">I Putu Ditya Purnama Putra</a></li>
-                                    <li><a href="#">I Gede Winkayana</a></li>
+                                    <li><a href="https://instagram.com/erx.tuadi" target="_blank">I Putu Adi Perdana Utama</a></li>
+                                    <li><a href="https://instagram.com/dittayoga" target="_blank">I Made Dita Yoga Radia</a></li>
+                                    <li><a href="https://instagram.com/erx.surya" target="_blank">I Made Adi Wira Surya Kencana</a></li>
+                                    <li><a href="https://instagram.com/" target="_blank">I Putu Ditya Purnama Putra</a></li>
+                                    <li><a href="https://instagram.com/winka_bob" target="_blank">I Gede Winkayana</a></li>
+                                    <li><a href="https://instagram.com/erx.aldi" target="_blank">Aldi Suryanto</a></li>
                                 </ul>
                             </div>
                         </div>
