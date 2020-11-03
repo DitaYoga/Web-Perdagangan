@@ -41,6 +41,8 @@
             </tr>
         @endforeach
     </table>
+    <br><br>
+    {!! $jam->render() !!}
     </div>
 </body>
 </html>
