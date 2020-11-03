@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+//admin//
 Route::get('/dashboard', [JamController::class, 'index']);
 Route::get('/dashboard/tambah', [JamController::class, 'create']);
 Route::post('/dashboard/tambah/proses', [JamController::class, 'store'])->name('proses_tambah');

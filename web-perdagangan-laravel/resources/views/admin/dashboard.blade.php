@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Daftar Jam</h2>
-    <button type="submit"><a href="/dashboard/tambah">Tambah</a></button>
+    <button type="submit"><a href="{{ url('dashboard/tambah') }}">Tambah</a></button>
     <table border="1">
         <tr>
             <th>No</th>
@@ -28,9 +28,9 @@
                 <td>Rp.{{ $j->harga }}</td>
                 <td>{{ $j->stok }}</td>
                 <td>
-                    <a href="/dashboard/edit/{{$j->id}}">Edit</a>
+                    <a href="{{ url('dashboard/edit/'.$j->id) }}">Edit</a>
                     |
-                    <a href="/dashboard/delete/{{$j->id}}" onclick="return confirm('Apakah Anda yakin ingin menghapus data jam ini ?')">Hapus</a>
+                    <a href="{{ url('dashboard/delete/'.$j->id) }}" onclick="return confirm('Apakah Anda yakin ingin menghapus data jam ini ?')">Hapus</a>
                 </td>
             </tr>
         @endforeach
