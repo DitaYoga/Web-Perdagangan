@@ -27,4 +27,10 @@ class BerandaController extends Controller
         $jam= Jam::latest()->paginate(9);
         return view('contact', ['jam'=> $jam]);
 	}
+	public function search(Request $Request){
+		$datasearch = Jam::select('*')->where('nama','LIKE','%'.$Request->search.'%')->paginate(9);
+		$jam= Jam::latest()->paginate(9);
+		$jammurah = Jam::select('*')->orderByRaw('harga ASC')->paginate(9);
+		return view('belanja',['jam' => $jam, 'alljam' => $datasearch, 'jammurah' => $jammurah]);
+	}
 }
