@@ -75,3 +75,9 @@
 .tab-pane .linkpage a{
     color: blue;
 }
+
+
+.col-lg-12 .owl-carousel .single_product_img img{
+    width: 40%;
+    margin: auto;
+}

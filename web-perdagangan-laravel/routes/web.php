@@ -24,6 +24,9 @@ Route::get('contact',[BerandaController::class,'contact']);
 Route::get('search',[BerandaController::class, 'search']);
 
 
+Route::get('product_details/{id}',[BerandaController::class , 'produkDetail']);
+
+
 
 //admin//
 Route::get('/dashboard', [JamController::class, 'index']);

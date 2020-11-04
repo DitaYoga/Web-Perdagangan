@@ -133,7 +133,7 @@
                             <div class="popular-img">
                                 <img src="assets/img/gallery/popular1.png" alt="">
                                 <div class="img-cap">
-                                    <span><a href="as">Add to cart</a></span>
+                                    <span>Add to cart</span>
                                 </div>
                                 <div class="favorit-items">
                                     <span class="flaticon-heart"></span>
