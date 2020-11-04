@@ -38,7 +38,7 @@
                                     <div class="popular-img">
                                         <img src="{{ asset('/image/'.$ajam->gambar) }}" height="360px" alt="">
                                         <div class="img-cap">
-                                            <span>Add to cart</span>
+                                            <a href="{{ url('product_details/'.$ajam->id) }}"><span>Add to cart</span></a>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -81,7 +81,7 @@
                                     <div class="popular-img">
                                         <img src="{{ asset('/image/'.$j->gambar) }}" height="380px" alt="">
                                         <div class="img-cap">
-                                            <span>Add to cart</span>
+                                            <a href="{{ url('product_details/'.$ajam->id) }}"><span>Add to cart</span></a>
                                         </div>
                                     </div>
                                     <div class="popular-caption">

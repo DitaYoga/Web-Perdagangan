@@ -121,7 +121,7 @@
                                 <ul>
                                 <?php for ($k=0; $k < 3; $k++) { 
                                 ?>
-                                    <li><a href="#">{{$jam[$k]->nama}}</a></li>
+                                    <li><a href="{{ url('product_details/'.$jam[$i]->id) }}">{{$jam[$k]->nama}}</a></li>
                                 <?php } ?>
                                 </ul>
                             </div>

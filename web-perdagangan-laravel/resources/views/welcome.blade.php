@@ -77,7 +77,7 @@
                                 <img src="{{ asset('/image/'.$jam[$i]->gambar) }}" height="360px" alt="">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">{{$jam[$i]->nama}}</a></h3>
+                                <h3><a href="{{ url('product_details/'.$jam[$i]->id) }}">{{$jam[$i]->nama}}</a></h3>
                                 <span>@currency( $jam[$i]->harga )</span>
                             </div>
                         </div>
@@ -85,34 +85,6 @@
                 <?php } ?>
                 </div>
             </div>
-            </section><section class="new-product-area section-padding30">
-                <div class="container">
-                    <!-- Section tittle -->
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="section-tittle mb-70">
-                                <h2>Jam Tangan Terbaru</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <?php 
-                            for ($i=0; $i < 3; $i++) { 
-                        ?>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-new-pro mb-30 text-center">
-                                <div class="product-img">
-                                    <img src="{{ asset('/image/'.$jam[$i]->gambar) }}" height="360px" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h3><a href="product_details.html">{{$jam[$i]->nama}}</a></h3>
-                                    <span>@currency( $jam[$i]->harga )</span>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-                    </div>
-                </div>
             </section>
             <!--  New Product End -->
             <!--? Gallery Area Start -->
@@ -160,16 +132,7 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
                 </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular1.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-=======
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <div class="single-popular-items mb-50 text-center">
@@ -181,7 +144,6 @@
                                     <div class="favorit-items">
                                         <span class="flaticon-heart"></span>
                                     </div>
->>>>>>> 79fcd0038e9039d717dfbd95b4b546df1cdbf0ec
                                 </div>
                                 <div class="popular-caption">
                                     <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
