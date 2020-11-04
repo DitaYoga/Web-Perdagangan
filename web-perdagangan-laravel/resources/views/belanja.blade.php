@@ -34,9 +34,6 @@
                                         <div class="img-cap">
                                             <span>Add to cart</span>
                                         </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
                                     </div>
                                     <div class="popular-caption">
                                         <h3><a href="product_details.html">{{$ajam->nama}}</a></h3>
@@ -58,9 +55,6 @@
                                         <img src="{{ asset('/image/'.$jmurah->gambar) }}" height="380px" alt="">
                                         <div class="img-cap">
                                             <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
