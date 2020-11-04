@@ -34,6 +34,10 @@
             <label>Stok</label>
             <input type="number" name="stok" class="form-control">
         </div>
+        <div class="form-group">
+            <label>Jumlah Pembelian</label>
+            <input type="number" name="jumlah_pembelian" class="form-control">
+        </div>
         <button type="submit" class="btn btn-dark">Kirim</button>
     </form>
     </div>

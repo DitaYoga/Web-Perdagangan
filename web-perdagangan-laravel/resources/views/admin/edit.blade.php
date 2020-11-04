@@ -35,6 +35,10 @@
             <label>Stok</label>
             <input type="number" name="stok" class="form-control" value="{{ $jam->stok }}">
         </div>
+        <div class="form-group">
+            <label>Jumlah Pembelian</label>
+            <input type="number" name="jumlah_pembelian" class="form-control" value="{{$jam->jumlah_pembelian}}">
+        </div>
         <button type="submit" class="btn btn-dark">Kirim</button>
         <a href="../" class="btn btn-dark">Cancel</a>
     </form>
