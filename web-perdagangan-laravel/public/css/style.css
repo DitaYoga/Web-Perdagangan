@@ -53,14 +53,11 @@
     display: none;
 }
 .linkpage span a{
-    margin: 3px;
+    /* margin: 3px; */
 }
 .linkpage span span[aria-current="page"]{
-    margin: 5px;
-    padding: 8px 20px;
-}
-.linkpage span[aria-disabled="true"]{
-    padding: 8px 20px;
+    margin: auto;
+    padding: 8px 5px 8px 10px;
 }
 .linkpage a{
     padding: 8px 20px 10px 22px;
