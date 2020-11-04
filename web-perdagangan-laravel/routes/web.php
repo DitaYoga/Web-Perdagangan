@@ -26,6 +26,9 @@ Route::group(['middleware' => ['auth', 'CheckLevel:user']], function(){
 Route::get('search',[BerandaController::class, 'search']);
 
 
+Route::get('product_details/{id}',[BerandaController::class , 'produkDetail']);
+
+
 
 //admin//
 Route::group(['middleware' => ['auth', 'CheckLevel:admin']], function(){
