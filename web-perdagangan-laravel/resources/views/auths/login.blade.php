@@ -11,24 +11,6 @@
 <body>
     <form action="{{ route('login_process') }}" method="post">
         {{ csrf_field() }}
-   <!--      <table>
-            <tr>
-                <th style="text-align: left">Nama</th>
-                <td>:</td>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr>
-            <tr>
-                <th style="text-align: left">password</th>
-                <td>:</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td></td>
-                <td><button type="submit">Submit</button></td>
-            </tr>
-        </table> -->
         <div class="container d-flex justify-content-center">
             <div class="d-flex flex-column justify-content-between">
                 <div class="card mt-3 p-5"><img src="">

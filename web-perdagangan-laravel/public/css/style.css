@@ -77,7 +77,14 @@
 }
 
 <<<<<<< HEAD
-/*-----------------*/
+=======
+
+.col-lg-12 .owl-carousel .single_product_img img{
+    width: 40%;
+    margin: auto;
+>>>>>>> 03b0c33644b6ed3a96f1916d073ca4cb9faa6b42
+}
+
 body {
     background-color: #EBEAEF
 }
@@ -170,10 +177,3 @@ p.mb-1 {
 .btn-block span {
     font-size: 15px;
     color: #D0E6FF
-=======
-
-.col-lg-12 .owl-carousel .single_product_img img{
-    width: 40%;
-    margin: auto;
->>>>>>> 03b0c33644b6ed3a96f1916d073ca4cb9faa6b42
-}
