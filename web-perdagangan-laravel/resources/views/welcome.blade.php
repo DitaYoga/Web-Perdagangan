@@ -4,6 +4,7 @@
     <header>
         @include('layouts.header')
     </header>
+
     <main>
         <!--? slider Area Start -->
         <div class="slider-area ">

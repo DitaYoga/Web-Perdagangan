@@ -72,3 +72,6 @@
 	background: unset;
 	border: none;
 }
+.tab-pane .linkpage a{
+    color: blue;
+}

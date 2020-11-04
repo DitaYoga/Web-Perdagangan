@@ -1,11 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-
     <header>
         @include('layouts.header')
     </header>
-
     <main>
         <!-- About Details Start -->
         <div class="about-details section-padding30">
@@ -13,24 +11,32 @@
                 <div class="row">
                     <div class="offset-xl-1 col-lg-8">
                         <div class="about-details-cap mb-50">
-                            <h4>Our Mission</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                            <h4>Kelompok Perdagangan</h4>
+                            <p>Kami adalah kelompok yang membuat website perdagangan .
                             </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
 
                         <div class="about-details-cap mb-50">
-                            <h4>Our Vision</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                            </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <h4>Tim Kami</h4>
+                            <p>I Putu Adi Perdana Utama</p>
+                            <p>I Made Dita Yoga Radisa</p>
+                            <p>I Gede Arista Winkayana</p>
+                            <p>I Made Adi Wira Surya Kencana</p>
+                            <p>Aldi Suryanto</p>
+                            <p>I Putu Ditya Purnama Putra</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- About Details End -->
-       <!--? Shop Method Start-->
+        <!--? Shop Method Start-->
         <div class="shop-method-area">
             <div class="container">
                 <div class="method-wrapper">

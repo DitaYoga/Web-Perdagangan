@@ -5,6 +5,7 @@
     <header>
         @include('layouts.header')
     </header>
+
     <main>
         <!-- ================ contact section start ================= -->
         <section class="contact-section">

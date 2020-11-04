@@ -23,6 +23,9 @@ Route::group(['middleware' => ['auth', 'CheckLevel:user']], function(){
     Route::get('contact', [BerandaController::class,'contact']);
 });
 
+Route::get('search',[BerandaController::class, 'search']);
+
+
 
 //admin//
 Route::group(['middleware' => ['auth', 'CheckLevel:admin']], function(){
