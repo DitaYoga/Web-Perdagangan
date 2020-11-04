@@ -136,7 +136,7 @@
                                     <li><a href="https://instagram.com/dittayoga" target="_blank">I Made Dita Yoga Radia</a></li>
                                     <li><a href="https://instagram.com/erx.surya" target="_blank">I Made Adi Wira Surya Kencana</a></li>
                                     <li><a href="https://instagram.com/" target="_blank">I Putu Ditya Purnama Putra</a></li>
-                                    <li><a href="https://instagram.com/winka_bob" target="_blank">I Gede Winkayana</a></li>
+                                    <li><a href="https://instagram.com/winka_bob" target="_blank">I Gede Arista Winkayana</a></li>
                                     <li><a href="https://instagram.com/erx.aldi" target="_blank">Aldi Suryanto</a></li>
                                 </ul>
                             </div>
