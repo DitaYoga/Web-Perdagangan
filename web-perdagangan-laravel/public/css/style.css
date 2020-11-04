@@ -83,10 +83,12 @@
     width: 40%;
     margin: auto;
 >>>>>>> 03b0c33644b6ed3a96f1916d073ca4cb9faa6b42
+
+/*------------------------*/
 }
 
-body {
-    background-color: #EBEAEF
+.bdy{
+    background-color: #EBEAEF;
 }
 
 .container {
@@ -97,32 +99,38 @@ body {
 .card {
     border: none;
     border-radius: 10px;
-    background-color: #4270C8;
-    width: 350px;
+    background-color: #ff2020;
+    width: 380px;
     margin-top: -60px;
-    height: 300px;
 }
 
 p.mb-1 {
     font-size: 25px;
-    color: #9FB7FD
+    color:  #ffb3b4;
 }
 
-.btn-primary {
+.btn-danger {
     border: none;
-    background: #5777DE;
-    margin-bottom: 60px
+    background:  #ff4d4f;
+    margin-bottom: 60px;
+}
+.btn-danger:hover{
+    background-color: #ff6669;
 }
 
-.btn-primary small {
-    color: #9FB7FD
+.btn-danger small {
+    color:  #ffb3b4;
 }
 
-.btn-primary span {
+.btn-danger span {
     font-size: 13px
 }
 
 .card.two {
+    border-top-right-radius: 60px;
+    border-top-left-radius: 0;
+}
+.card.two2 {
     border-top-right-radius: 60px;
     border-top-left-radius: 0;
 }
@@ -136,6 +144,7 @@ p.mb-1 {
     border: none;
     border-radius: 0;
     outline: 0;
+    padding: 25px 0px;
     border-bottom: 1.5px solid #E6EBEE
 }
 
@@ -148,7 +157,6 @@ p.mb-1 {
 .form-control-placeholder {
     position: absolute;
     top: 15px;
-    left: 10px;
     transition: all 200ms;
     opacity: 0.5;
     font-size: 80%
@@ -156,6 +164,7 @@ p.mb-1 {
 
 .form-control:focus+.form-control-placeholder,
 .form-control:valid+.form-control-placeholder {
+    margin-bottom: 10px;
     font-size: 80%;
     transform: translate3d(0, -90%, 0);
     opacity: 1;
@@ -166,8 +175,11 @@ p.mb-1 {
 .btn-block {
     border: none;
     border-radius: 8px;
-    background-color: #506CCF;
+    background-color: #ff2020;
     padding: 10px 0 12px
+}
+.btn-block:hover{
+    background-color: #ff4d4f;
 }
 
 .btn-block:focus {
