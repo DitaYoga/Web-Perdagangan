@@ -42,7 +42,7 @@
         @endforeach
     </table>
     <br><br>
-    {{ $jam->links() }}
+    <div class="linkpage">{{ $jam->links() }}</div>
     <br><br>
     </div>
 </body>

@@ -36,3 +36,42 @@
 .row .col-xl-4{
 	margin-bottom: 30px;
 }
+
+
+.linkpage {
+    margin-top: 20px;
+    display: flex;
+}
+.linkpage nav{
+    margin: auto;
+}
+.linkpage div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.linkpage p{
+    display: none;
+}
+.linkpage span a{
+    margin: 3px;
+}
+.linkpage span span[aria-current="page"]{
+    margin: 5px;
+    padding: 8px 20px;
+}
+.linkpage span[aria-disabled="true"]{
+    padding: 8px 20px;
+}
+.linkpage a{
+    padding: 8px 20px 10px 22px;
+}
+.linkpage svg{
+    height: 10px;
+}
+.linkpage nav .justify-between{
+    display: none;
+}
+.linkpage span[class="relative"]{
+	background: unset;
+	border: none;
+}
