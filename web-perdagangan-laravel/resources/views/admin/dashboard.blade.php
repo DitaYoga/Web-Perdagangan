@@ -9,11 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    <br></br>
+    <br><br>
     <h1 class="display-4 center">Daftar Jam</h1>
     <div class="container">
     <a class="btn btn-outline-dark" href="{{ url('dashboard/tambah') }}">Tambah</a>
-    <br></br>
+    <br><br>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -42,7 +42,8 @@
         @endforeach
     </table>
     <br><br>
-    {!! $jam->render() !!}
+    {{ $jam->links() }}
+    <br><br>
     </div>
 </body>
 </html>

@@ -16,7 +16,7 @@ class JamController extends Controller
      */
     public function index()
     {
-        $jam= Jam::latest()->paginate(5);
+        $jam= Jam::latest()->simplePaginate(5);
         return view('admin.dashboard', compact('jam'));
     }
 
