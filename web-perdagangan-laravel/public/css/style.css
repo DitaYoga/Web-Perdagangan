@@ -73,6 +73,9 @@
 	background: unset;
 	border: none;
 }*/
+.row{
+    width: 100%;
+}
 
 
 .page-item.active .page-link {

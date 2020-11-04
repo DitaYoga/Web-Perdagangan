@@ -11,7 +11,9 @@ class BerandaController extends Controller
 {
 	public function index(){
 		$jam= Jam::latest()->get();
-        return view('welcome', ['jam'=> $jam]);
+		$jampopular = Jam::select('*')->orderByRaw('jumlah_pembelian DESC')->paginate(6);
+		$jamhighlight = Jam::select('*')->paginate(2);
+        return view('welcome', ['jam'=> $jam,'jampopular' => $jampopular,'jamhighlight' => $jamhighlight]);
 	}
 	public function shop(){
 		$jammurah = Jam::select('*')->orderByRaw('harga ASC')->paginate(9);
