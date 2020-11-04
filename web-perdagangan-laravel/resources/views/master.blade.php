@@ -172,7 +172,7 @@
     <div class="search-model-box">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-btn">+</div>
-            <form action="{{ url('search') }}" class="search-model-form">
+            <form action="{{ url('/search') }}" class="search-model-form">
                 <input type="text" id="search-input" name="search" placeholder="Searching key.....">
             </form>
         </div>

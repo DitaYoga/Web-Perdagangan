@@ -15,16 +15,17 @@ class BerandaController extends Controller
 	}
 	public function shop(){
 		$jammurah = Jam::select('*')->orderByRaw('harga ASC')->paginate(9);
-		$jam= Jam::latest()->paginate(9);
+		$jam= Jam::latest()->paginate(4);
+		$newjam = Jam::latest()->paginate(9);
 		$alljam = Jam::select('*')->paginate(9);
-        return view('belanja', ['jam'=> $jam] ,['jammurah' => $jammurah,'alljam' => $alljam]);
+        return view('belanja', ['jam'=> $jam, 'newjam' =>$newjam] ,['jammurah' => $jammurah,'alljam' => $alljam]);
 	}
 	public function about(){
-		$jam= Jam::latest()->paginate(3);
+		$jam= Jam::latest()->paginate(4);
         return view('about', ['jam'=> $jam]);
 	}
 	public function contact(){
-        $jam= Jam::latest()->paginate(3);
+        $jam= Jam::latest()->paginate(4);
         return view('contact', ['jam'=> $jam]);
 	}
 	public function search(Request $Request){
@@ -34,7 +35,7 @@ class BerandaController extends Controller
 		return view('belanja',['jam' => $jam, 'alljam' => $datasearch, 'jammurah' => $jammurah]);
 	}
 	public function produkDetail($id){
-		$jam= Jam::latest()->paginate(3);
+		$jam= Jam::latest()->paginate(4);
 		$datajam = Jam::select('*')->where('id',$id)->first();
 		return view('detailJam',['jam' => $jam, 'datajam' => $datajam]);
 	}
