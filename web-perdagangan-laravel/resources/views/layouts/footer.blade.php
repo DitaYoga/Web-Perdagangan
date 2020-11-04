@@ -35,10 +35,11 @@
                     <div class="footer-tittle">
                         <h4>Jam Terbaru</h4>
                         <ul>
-                        <?php for ($k=0; $k < 3; $k++) { 
-                        ?>
-                            <li><a href="#">{{$jam[$k]->nama}}</a></li>
-                        <?php } ?>
+                            <?php 
+                                for ($k=0; $k <= 3; $k++) { 
+                            ?>
+                            <li><a href="{{ url('product_details/'.$jam[$k]->id) }}">{{$jam[$k]->nama}}</a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>

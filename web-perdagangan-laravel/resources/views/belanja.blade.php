@@ -71,11 +71,12 @@
                             </div>
                             @endforeach
                         </div>
+                        <div class="linkpage">{{ $alljam->links() }}</div>
                     </div>
                     <!-- Card three -->
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                         <div class="row">
-                            @foreach($jam as $j)
+                            @foreach($newjam as $j)
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-popular-items mb-50 text-center">
                                     <div class="popular-img">
@@ -91,8 +92,8 @@
                                 </div>
                             </div>
                             @endforeach
-                            
                         </div>
+                        <div class="linkpage">{{ $alljam->links() }}</div>
                     </div>
                 </div>
                 <!-- End Nav Card -->
