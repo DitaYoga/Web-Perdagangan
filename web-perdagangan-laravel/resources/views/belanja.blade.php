@@ -42,13 +42,8 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-<<<<<<< HEAD
-                                        <h3><a href="{{ url('product_details/'.$)ajam->id }}">{{$ajam->nama}}</a></h3>
-                                        <span>{{ $ajam->harga }}</span>
-=======
-                                        <h3><a href="product_details.html">{{ $ajam->nama }}</a></h3>
+                                        <h3><a href="{{ url('product_details/'.$ajam->id) }}">{{$ajam->nama}}</a></h3>
                                         <span>@currency( $ajam->harga )</span>
->>>>>>> 79fcd0038e9039d717dfbd95b4b546df1cdbf0ec
                                     </div>
                                 </div>
                             </div>
@@ -69,13 +64,8 @@
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-<<<<<<< HEAD
                                         <h3><a href="{{ url('product_details/'.$jmurah->id)}}">{{$jmurah->nama}}</a></h3>
-                                        <span>Rp {{ $jmurah->harga }}</span>
-=======
-                                        <h3><a href="product_details.html">{{$jmurah->nama}}</a></h3>
                                         <span>@currency( $jmurah->harga )</span>
->>>>>>> 79fcd0038e9039d717dfbd95b4b546df1cdbf0ec
                                     </div>
                                 </div>
                             </div>
