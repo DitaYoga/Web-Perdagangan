@@ -1,5 +1,9 @@
-@extends('master')
-@section('konten')
+@extends('layouts.master')
+
+@section('content')
+    <header>
+        @include('layouts.header')
+    </header>
     <main>
         <!-- About Details Start -->
         <div class="about-details section-padding30">
@@ -21,7 +25,7 @@
                         <div class="about-details-cap mb-50">
                             <h4>Tim Kami</h4>
                             <p>I Putu Adi Perdana Utama</p>
-                            <p>I Made dita Yoga Radisa</p>
+                            <p>I Made Dita Yoga Radisa</p>
                             <p>I Gede Arista Winkayana</p>
                             <p>I Made Adi Wira Surya Kencana</p>
                             <p>Aldi Suryanto</p>
@@ -32,7 +36,7 @@
             </div>
         </div>
         <!-- About Details End -->
-       <!--? Shop Method Start-->
+        <!--? Shop Method Start-->
         <div class="shop-method-area">
             <div class="container">
                 <div class="method-wrapper">
@@ -64,4 +68,8 @@
         </div>
         <!-- Shop Method End-->
     </main>
+    <footer>
+        @include('layouts.footer')
+    </footer>
+
 @endsection

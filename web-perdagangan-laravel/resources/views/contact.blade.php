@@ -1,5 +1,11 @@
-@extends('master')
-@section('konten')
+@extends('layouts.master')
+
+@section('content')
+
+    <header>
+        @include('layouts.header')
+    </header>
+
     <main>
         <!-- ================ contact section start ================= -->
         <section class="contact-section">
@@ -65,4 +71,8 @@
         </section>
         <!-- ================ contact section end ================= -->
     </main>
-    @endsection
+    <footer>
+        @include('layouts.footer')
+    </footer>
+
+@endsection

@@ -1,5 +1,10 @@
-@extends('master')
-@section('konten')
+@extends('layouts.master')
+
+@section('content')
+    <header>
+        @include('layouts.header')
+    </header>
+
     <main>
         <!--? slider Area Start -->
         <div class="slider-area ">
@@ -63,7 +68,7 @@
                     </div>
                 </div>
                 <div class="row">
-                   <?php 
+                    <?php 
                         for ($i=0; $i < 3; $i++) { 
                     ?>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
@@ -73,59 +78,89 @@
                             </div>
                             <div class="product-caption">
                                 <h3><a href="product_details.html">{{$jam[$i]->nama}}</a></h3>
-                                <span>Rp {{ $jam[$i]->harga }}</span>
+                                <span>@currency( $jam[$i]->harga )</span>
                             </div>
                         </div>
                     </div>
                 <?php } ?>
                 </div>
             </div>
-        </section>
-        <!--  New Product End -->
-        <!--? Gallery Area Start -->
-        <div class="gallery-area">
-            <div class="container-fluid p-0 fix">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-12">
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
-                                <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
-                                <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
-                                </div>
+            </section><section class="new-product-area section-padding30">
+                <div class="container">
+                    <!-- Section tittle -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="section-tittle mb-70">
+                                <h2>Jam Tangan Terbaru</h2>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <?php 
+                            for ($i=0; $i < 3; $i++) { 
+                        ?>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-new-pro mb-30 text-center">
+                                <div class="product-img">
+                                    <img src="{{ asset('/image/'.$jam[$i]->gambar) }}" height="360px" alt="">
+                                </div>
+                                <div class="product-caption">
+                                    <h3><a href="product_details.html">{{$jam[$i]->nama}}</a></h3>
+                                    <span>@currency( $jam[$i]->harga )</span>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    </div>
+                </div>
+            </section>
+            <!--  New Product End -->
+            <!--? Gallery Area Start -->
+            <div class="gallery-area">
+                <div class="container-fluid p-0 fix">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-gallery mb-30">
+                                <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-gallery mb-30">
+                                <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-12">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
+                                    <div class="single-gallery mb-30">
+                                        <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
+                                    <div class="single-gallery mb-30">
+                                        <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Gallery Area End -->
-        <!--? Popular Items Start -->
-        <div class="popular-items section-padding30">
-            <div class="container">
-                <!-- Section tittle -->
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8 col-md-10">
-                        <div class="section-tittle mb-70 text-center">
-                            <h2>Item Populer</h2>
-                            <p>Beriku adalah daftar jam yang paling diminati di website kami</p>
+            <!-- Gallery Area End -->
+            <!--? Popular Items Start -->
+            <div class="popular-items section-padding30">
+                <div class="container">
+                    <!-- Section tittle -->
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-lg-8 col-md-10">
+                            <div class="section-tittle mb-70 text-center">
+                                <h2>Item Populer</h2>
+                                <p>Beriku adalah daftar jam yang paling diminati di website kami</p>
+                            </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
@@ -134,176 +169,189 @@
                                 <img src="assets/img/gallery/popular1.png" alt="">
                                 <div class="img-cap">
                                     <span>Add to cart</span>
+=======
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="assets/img/gallery/popular1.png" alt="">
+                                    <div class="img-cap">
+                                        <span><a href="as">Add to cart</a></span>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+>>>>>>> 79fcd0038e9039d717dfbd95b4b546df1cdbf0ec
                                 </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
+                                <div class="popular-caption">
+                                    <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
+                                    <span>$ 45,743</span>
                                 </div>
                             </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="assets/img/gallery/popular2.png" alt="">
+                                    <div class="img-cap">
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="assets/img/gallery/popular3.png" alt="">
+                                    <div class="img-cap">
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="assets/img/gallery/popular4.png" alt="">
+                                    <div class="img-cap">
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="assets/img/gallery/popular5.png" alt="">
+                                    <div class="img-cap">
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
+                                    <span>$ 45,743</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="assets/img/gallery/popular6.png" alt="">
+                                    <div class="img-cap">
+                                        <span>Add to cart</span>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
+                                    <span>$ 45,743</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular2.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular3.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular4.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular5.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="assets/img/gallery/popular6.png" alt="">
-                                <div class="img-cap">
-                                    <span>Add to cart</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Button -->
-                <div class="row justify-content-center">
-                    <div class="room-btn pt-70">
-                        <a href="shop" class="btn view-btn1">Lihat Lebih Banyak</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Popular Items End -->
-        <!--? Watch Choice  Start-->
-        <div class="watch-area section-padding30">
-            <div class="container">
-                <div class="row align-items-center justify-content-between padding-130">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="watch-details mb-40">
-                            <h2>Watch of Choice</h2>
-                            <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                            <a href="shop.html" class="btn">Show Watches</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40">
-                            <img src="assets/img/gallery/choce_watch1.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40">
-                            <img src="assets/img/gallery/choce_watch2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="watch-details mb-40">
-                            <h2>Watch of Choice</h2>
-                            <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                            <a href="shop.html" class="btn">Show Watches</a>
+                    <!-- Button -->
+                    <div class="row justify-content-center">
+                        <div class="room-btn pt-70">
+                            <a href="shop" class="btn view-btn1">Lihat Lebih Banyak</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Watch Choice  End-->
-        <!--? Shop Method Start-->
-        <div class="shop-method-area">
-            <div class="container">
-                <div class="method-wrapper">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-package"></i>
-                                <h6>GRATIS ongkir</h6>
-                                <p>Pengiriman Produk kami tidak memerlukan biaya tambahan</p>
+            <!-- Popular Items End -->
+            <!--? Watch Choice  Start-->
+            <div class="watch-area section-padding30">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between padding-130">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="watch-details mb-40">
+                                <h2>Watch of Choice</h2>
+                                <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                                <a href="shop.html" class="btn">Show Watches</a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-unlock"></i>
-                                <h6>Sistem Pembayaran yang aman</h6>
-                                <p>Kami menjamin Pembayaran yang anda lakukan di website kami</p>
+                        <div class="col-lg-6 col-md-6 col-sm-10">
+                            <div class="choice-watch-img mb-40">
+                                <img src="assets/img/gallery/choce_watch1.png" alt="">
                             </div>
-                        </div> 
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-reload"></i>
-                                <h6>Melayani Penukaran Barang</h6>
-                                <p>jika Anda merasa barang yang anda dapatkan tidak sama dengan yang dipesan kami siap melayani penukaran barang</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-lg-6 col-md-6 col-sm-10">
+                            <div class="choice-watch-img mb-40">
+                                <img src="assets/img/gallery/choce_watch2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6">
+                            <div class="watch-details mb-40">
+                                <h2>Watch of Choice</h2>
+                                <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                                <a href="shop.html" class="btn">Show Watches</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Shop Method End-->
-    </main>
+            <!-- Watch Choice  End-->
+            <!--? Shop Method Start-->
+            <div class="shop-method-area">
+                <div class="container">
+                    <div class="method-wrapper">
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="single-method mb-40">
+                                    <i class="ti-package"></i>
+                                    <h6>GRATIS ongkir</h6>
+                                    <p>Pengiriman Produk kami tidak memerlukan biaya tambahan</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="single-method mb-40">
+                                    <i class="ti-unlock"></i>
+                                    <h6>Sistem Pembayaran yang aman</h6>
+                                    <p>Kami menjamin Pembayaran yang anda lakukan di website kami</p>
+                                </div>
+                            </div> 
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="single-method mb-40">
+                                    <i class="ti-reload"></i>
+                                    <h6>Melayani Penukaran Barang</h6>
+                                    <p>jika Anda merasa barang yang anda dapatkan tidak sama dengan yang dipesan kami siap melayani penukaran barang</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shop Method End-->
+        </main>
+        <footer>
+            @include('layouts.footer')
+        </footer>
+
 @endsection

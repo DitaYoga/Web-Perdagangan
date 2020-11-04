@@ -13,6 +13,7 @@
     <h1 class="display-4 center">Daftar Jam</h1>
     <div class="container">
     <a class="btn btn-outline-dark" href="{{ url('dashboard/tambah') }}">Tambah</a>
+    <a class="btn btn-outline-dark" href="{{ url('/logout') }}">Logout</a>
     <br><br>
     <table class="table">
         <thead class="thead-dark">
@@ -23,6 +24,7 @@
                 <th>Deskripsi</th>
                 <th>Harga</th>
                 <th>Stok</th>
+                <th>Jumlah Pembelian</th>
                 <th class="action">Action</th>
             </tr>
         </thead>
@@ -31,9 +33,10 @@
                 <td>{{ $loop->iteration }}</td>
                 <td class="td-img"><img class="img" src="{{ asset('/image/'.$j->gambar) }}" alt=""></td>
                 <td>{{ $j->nama }}</td>
-                <td>{{ $j->deskripsi }}</td>
-                <td>Rp.{{ $j->harga }}</td>
+                <td>{{ Str::limit($j->deskripsi, 110, ' ...') }}</td>
+                <td>@currency( $j->harga )</td>
                 <td>{{ $j->stok }}</td>
+                <td>{{ $j->jumlah_pembelian }}</td>
                 <td>
                     <a class="btn btn-dark btn-sm" href="{{ url('dashboard/edit/'.$j->id) }}">Edit</a>
                     <a class="btn btn-dark btn-sm" href="{{ url('dashboard/delete/'.$j->id) }}" onclick="return confirm('Apakah Anda yakin ingin menghapus data jam ini ?')">Hapus</a>

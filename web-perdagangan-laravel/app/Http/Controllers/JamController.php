@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Jam;
 use\File;
+use Illuminate\Support\Str;
 
 class JamController extends Controller
 {
@@ -44,6 +45,7 @@ class JamController extends Controller
             'deskripsi' => 'required',
             'harga' => 'required',
             'stok' => 'required',
+            'jumlah_pembelian' => 'required',
         ]);
 
         // Menyimpan data gambar yang diupload yang disimpan di variable gambar
@@ -60,6 +62,7 @@ class JamController extends Controller
             'deskripsi' => $request->deskripsi,
             'harga' => $request->harga,
             'stok' => $request->stok,
+            'jumlah_pembelian' => $request->jumlah_pembelian,
         ]);
         return redirect('/dashboard');
     }
@@ -106,6 +109,7 @@ class JamController extends Controller
                 'deskripsi' => 'required',
                 'harga' => 'required',
                 'stok' => 'required',
+                'jumlah_pembelian' => 'required',
             ]);
 
             // Menyimpan data gambar yang diupload yang disimpan di variable gambar
@@ -124,6 +128,7 @@ class JamController extends Controller
                 'deskripsi' => $request->deskripsi,
                 'harga' => $request->harga,
                 'stok' => $request->stok,
+                'jumlah_pembelian' => $request->jumlah_pembelian,
             ]);
         } else{
             $request->validate([
@@ -131,6 +136,7 @@ class JamController extends Controller
                 'deskripsi' => 'required',
                 'harga' => 'required',
                 'stok' => 'required',
+                'jumlah_pembelian' => 'required',
             ]);
 
             $jam->update([
@@ -138,6 +144,7 @@ class JamController extends Controller
                 'deskripsi' => $request->deskripsi,
                 'harga' => $request->harga,
                 'stok' => $request->stok,
+                'jumlah_pembelian' => $request->jumlah_pembelian,
             ]);
         }
         return redirect('/dashboard');
