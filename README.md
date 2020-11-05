@@ -1,13 +1,13 @@
 # Web-Perdagangan
-- Tim Kami Mengerjakan Web Perdagangan
+- Tim Kami Mengerjakan Projek Web Perdagangan
 
-# tim Kami
-- I Putu Adi Perdana Utama
-- I Made Dita Yoga Radisa
-- I Made Adi Wira Surya Kencana
-- I Gede Arista Winkayana
-- I Putu Ditya Purnama Putra
-- Aldi Suryanto
+# Tim Kami
+- [I Putu Adi Perdana Utama](https://github.com/Ersnix)
+- [I Made Dita Yoga Radisa](https://github.com/DitaYoga)
+- [I Made Adi Wira Surya Kencana](https://github.com/suryakencana08)
+- [I Gede Arista Winkayana](https://github.com/Winsky4Lyfe)
+- [I Putu Ditya Purnama Putra](https://github.com/DityaPurnama)
+- [Aldi Suryanto](https://github.com/suryanto02)
 
 # Task Belum Dikerjakan
 - Table transaksi
