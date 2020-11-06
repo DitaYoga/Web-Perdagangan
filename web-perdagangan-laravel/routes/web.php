@@ -39,6 +39,11 @@ Route::group(['middleware' => ['auth', 'CheckLevel:admin']], function(){
     Route::get('/dashboard/edit/{id}', [JamController::class, 'edit']);
     Route::patch('/dashboard/update/{id}', [JamController::class, 'update'])->name('proses_update');
     Route::get('/dashboard/delete/{id}', [JamController::class, 'destroy']);
+
+    Route::get('/daftaruser', [JamController::class, 'daftaruser']);
+    Route::get('/daftaruser/tambah', [JamController::class, 'tambah']);
+    Route::get('/daftaruser/delete/{id}', [JamController::class, 'delete']);
+
 });
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');

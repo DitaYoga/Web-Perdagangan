@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Jam;
 use\File;
@@ -165,5 +166,27 @@ class JamController extends Controller
         // hapus data
         Jam::where('id', $id)->delete();
         return redirect('/dashboard');
+    }
+
+
+
+
+
+    // daftar user
+    public function daftaruser()
+    {
+        $daftar = DB::table('tb_user')->get();
+        return view('admin.daftar-user',['daftar' => $daftar]);
+    }
+
+    public function tambah()
+    {
+
+    }
+
+    public function delete($id)
+    {
+        DB::table('tb_user')->where('id',$id)->delete();
+        return redirect('/daftaruser');
     }
 }
