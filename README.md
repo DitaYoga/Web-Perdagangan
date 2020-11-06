@@ -22,6 +22,5 @@ I Putu Adi Perdana Utama | I Made Dita Yoga Radisa | I Putu Ditya Purnama Putra
 - Proses Transaksi
 - Tampilan Chart
 - Tampilan Transaksi
-- ( Admin ) Tampilan Daftar user
 - ( Admin ) Tampilan Laporan Daftar Pembelian
 - ( Admin ) Tampilan Konfismasi Pembelian
