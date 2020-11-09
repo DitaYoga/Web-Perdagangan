@@ -15,7 +15,12 @@
                             <li><a href="{{url('/shop')}}">shop</a></li>
                             <li><a href="{{url('/about')}}">about</a></li>
                             <li><a href="{{url('/contact')}}">Contact</a></li>
-                            <li><a href="{{url('/logout')}}">Logout</a></li>
+                            <?php 
+                                if (session()->get('login') != null) {
+                                    
+                             ?>
+                                <li><a href="{{url('/logout')}}">Logout</a></li>
+                            <?php } ?>
                         </ul>
                     </nav>
                 </div>
@@ -27,8 +32,8 @@
                                 <span class="flaticon-search"></span>
                             </div>
                         </li>
-                        <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                        <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                        <li> <a href="{{ url('login') }}"><span class="flaticon-user"></span></a></li>
+                        <li><a href="{{ url('chart') }}"><span class="flaticon-shopping-cart"></span></a> </li>
                     </ul>
                 </div>
             </div>

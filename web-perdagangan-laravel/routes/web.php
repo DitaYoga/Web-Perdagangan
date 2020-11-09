@@ -17,14 +17,14 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::group(['middleware' => ['auth', 'CheckLevel:user']], function(){
-    Route::get('/', [BerandaController::class, 'index']);
-    Route::get('shop', [BerandaController::class,'shop']);
-    Route::get('about', [BerandaController::class,'about']);
-    Route::get('contact', [BerandaController::class,'contact']);
-    Route::get('search',[BerandaController::class, 'search']);
+    Route::get('chart', [BerandaController::class, 'chart']);
 });
 
-
+Route::get('/', [BerandaController::class, 'index']);
+Route::get('shop', [BerandaController::class,'shop']);
+Route::get('about', [BerandaController::class,'about']);
+Route::get('contact', [BerandaController::class,'contact']);
+Route::get('search',[BerandaController::class, 'search']);
 
 
 Route::get('product_details/{id}',[BerandaController::class , 'produkDetail']);

@@ -71,7 +71,7 @@
                             </div>
                             @endforeach
                         </div>
-                        <div class="linkpage">{{ $alljam->links() }}</div>
+                        <div class="linkpage">{{ $jammurah->links() }}</div>
                     </div>
                     <!-- Card three -->
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -82,7 +82,7 @@
                                     <div class="popular-img">
                                         <img src="{{ asset('/image/'.$j->gambar) }}" height="380px" alt="">
                                         <div class="img-cap">
-                                            <a href="{{ url('product_details/'.$ajam->id) }}"><span>Add to cart</span></a>
+                                            <a href="{{ url('product_details/'.$j->id) }}"><span>Add to cart</span></a>
                                         </div>
                                     </div>
                                     <div class="popular-caption">
@@ -93,7 +93,7 @@
                             </div>
                             @endforeach
                         </div>
-                        <div class="linkpage">{{ $alljam->links() }}</div>
+                        <div class="linkpage">{{ $newjam->links() }}</div>
                     </div>
                 </div>
                 <!-- End Nav Card -->

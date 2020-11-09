@@ -32,7 +32,7 @@ class BerandaController extends Controller
 	}
 	public function search(Request $Request){
 		$datasearch = Jam::select('*')->where('nama','LIKE','%'.$Request->search.'%')->paginate(9);
-		$jam= Jam::latest()->paginate(9);
+		$jam= Jam::latest()->paginate(4);
 		$newjam = Jam::latest()->paginate(9);
 		$jammurah = Jam::select('*')->orderByRaw('harga ASC')->paginate(9);
 		return view('belanja',['jam' => $jam, 'alljam' => $datasearch, 'jammurah' => $jammurah,'newjam' =>$newjam]);
@@ -41,5 +41,8 @@ class BerandaController extends Controller
 		$jam= Jam::latest()->paginate(4);
 		$datajam = Jam::select('*')->where('id',$id)->first();
 		return view('detailJam',['jam' => $jam, 'datajam' => $datajam]);
+	}
+	public function chart(){
+		return view('chart');
 	}
 }
