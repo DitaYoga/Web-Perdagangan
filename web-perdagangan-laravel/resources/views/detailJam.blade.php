@@ -17,7 +17,7 @@
                 <div class="single_product_text text-center">
                     
                     <p>{{$datajam->deskripsi}}</p>
-                    <p>Rp.{{$datajam->harga}}/buah</p>
+                    <p>@currency ( $datajam->harga )/buah</p>
                     <div class="card_area">
                         <div class="product_count_area">
                             <p>Quantity</p>
@@ -26,7 +26,6 @@
                                 <input class="product_count_item input-number" type="text" value="1" min="0" max="10">
                                 <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                             </div>
-                            <p>$5</p>
                         </div>
                     <div class="add_to_cart">
                         <a href="#" class="btn_3">add to cart</a>

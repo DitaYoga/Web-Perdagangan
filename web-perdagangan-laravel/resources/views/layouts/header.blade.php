@@ -33,7 +33,7 @@
                             </div>
                         </li>
                         <li> <a href="{{ url('login') }}"><span class="flaticon-user"></span></a></li>
-                        <li><a href="{{ url('chart') }}"><span class="flaticon-shopping-cart"></span></a> </li>
+                        <li><a href="{{ url('cart') }}"><span class="flaticon-shopping-cart"></span></a> </li>
                     </ul>
                 </div>
             </div>

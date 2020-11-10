@@ -42,7 +42,7 @@ class BerandaController extends Controller
 		$datajam = Jam::select('*')->where('id',$id)->first();
 		return view('detailJam',['jam' => $jam, 'datajam' => $datajam]);
 	}
-	public function chart(){
-		return view('chart');
+	public function cart(){
+		return view('cart');
 	}
 }

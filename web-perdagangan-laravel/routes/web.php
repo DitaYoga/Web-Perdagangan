@@ -17,7 +17,7 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::group(['middleware' => ['auth', 'CheckLevel:user']], function(){
-    Route::get('chart', [BerandaController::class, 'chart']);
+    Route::get('cart', [BerandaController::class, 'cart']);
 });
 
 Route::get('/', [BerandaController::class, 'index']);

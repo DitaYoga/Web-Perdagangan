@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="popular-caption">
                                         <h3><a href="{{ url('product_details/'.$j->id) }}">{{ $j->nama }}</a></h3>
-                                        <span>Rp {{ $j->harga }}</span>
+                                        <span>@currency( $j->harga )</span>
                                     </div>
                                 </div>
                             </div>
