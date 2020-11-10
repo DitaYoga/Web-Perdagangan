@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label>Deskripsi</label>
-                <textarea type="text" name="deskripsi" class="form-control"></textarea>
+                <textarea type="text" name="deskripsi" class="form-control" cols="30" rows="5"></textarea>
             </div>
             <div class="form-group">
                 <label>Harga</label>
@@ -42,6 +42,6 @@
             <button type="submit" class="btn btn-dark">Kirim</button>
         </form>
         </div>
-    </div>
+    </div><br>
 </body>
 </html>

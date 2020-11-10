@@ -14,8 +14,7 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array
-     */
-    protected $table = 'tb_user';
+     */    
     protected $fillable = [
         'name', 'level', 'email', 'password', 'created_at', 'updated_at',
     ];

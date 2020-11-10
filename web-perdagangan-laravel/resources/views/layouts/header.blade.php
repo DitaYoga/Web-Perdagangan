@@ -18,7 +18,7 @@
                             <?php 
                                 if (session()->get('login') != null) {
                                     
-                             ?>
+                            ?>
                                 <li><a href="{{url('/logout')}}">Logout</a></li>
                             <?php } ?>
                         </ul>

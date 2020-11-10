@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Jam;
+use App\User;
 use\File;
 use Illuminate\Support\Str;
 
@@ -175,8 +176,8 @@ class JamController extends Controller
     // daftar user
     public function daftaruser()
     {
-        $daftar = DB::table('tb_user')->get();
-        return view('admin.daftar-user',['daftar' => $daftar]);
+        $user = User::latest()->get();
+        return view('admin.daftar-user',compact('user'));
     }
 
     public function tambah()
@@ -186,7 +187,7 @@ class JamController extends Controller
 
     public function delete($id)
     {
-        DB::table('tb_user')->where('id',$id)->delete();
+        User::where('id',$id)->delete();
         return redirect('/daftaruser');
     }
 }

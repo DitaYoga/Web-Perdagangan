@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Document</title>
-     @include('layouts.sidebar')
+    @include('layouts.sidebar')
 </head>
 <body>
     <!-- MAIN -->
@@ -15,7 +15,6 @@
     <h1 class="display-4 center">Daftar Jam</h1>
     <div class="container">
     <a class="btn btn-outline-dark" href="{{ url('dashboard/tambah') }}">Tambah</a>
-    <a class="btn btn-outline-dark" href="{{ url('/logout') }}">Logout</a>
     <br><br>
     <table class="table">
         <thead class="thead-dark">
@@ -35,7 +34,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td class="td-img"><img class="img" src="{{ asset('/image/'.$j->gambar) }}" alt=""></td>
                 <td>{{ $j->nama }}</td>
-                <td>{{ Str::limit($j->deskripsi, 110, ' ...') }}</td>
+                <td>{{ Str::limit($j->deskripsi, 70, ' ...') }}</td>
                 <td>@currency( $j->harga )</td>
                 <td>{{ $j->stok }}</td>
                 <td>{{ $j->jumlah_pembelian }}</td>

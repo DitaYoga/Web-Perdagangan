@@ -30,8 +30,13 @@
                     <span class="fa fa-user fa-fw mr-3"></span>
                     <span class="menu-collapsed">Daftar User</span>
                 </div>
-            </a>        
-           
+            </a>  
+            <a href="{{ url('/logout') }}" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-sign-out fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Logout</span>
+              </div>
+          </a>       
         </ul>
     </div> 
     <!-- End Sidebar -->

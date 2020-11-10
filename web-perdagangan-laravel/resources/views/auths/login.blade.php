@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
 </head>
 <body class="bdy">
     <form action="{{ route('login_process') }}" method="post">

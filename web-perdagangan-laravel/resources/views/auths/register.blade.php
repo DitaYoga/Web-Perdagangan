@@ -6,34 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/bootstrap.min.css') }}">
-   <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
 </head>
 <body class="bdy">
     <form action="{{ route('register_process') }}" method="POST">
-  <!--       {{ csrf_field() }}
-        <table>
-            <tr>
-                <th style="text-align: left">Nama</th>
-                <td>:</td>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr>
-                <th style="text-align: left">email</th>
-                <td>:</td>
-                <td><input type="text" name="email"></td>
-            </tr>
-            <tr>
-                <th style="text-align: left">password</th>
-                <td>:</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td><input type="hidden" name="level" value=""></td>
-                <td><button type="submit">Submit</button></td>
-            </tr>
-        </table> -->
-{{ csrf_field() }}
+    {{ csrf_field() }}
         <div class="container d-flex justify-content-center">
             <div class="d-flex flex-column justify-content-between">
                 <div class="card mt-3 p-5">
