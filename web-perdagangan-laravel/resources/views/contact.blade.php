@@ -5,72 +5,181 @@
     <header>
         @include('layouts.header')
     </header>
-
-    <main>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
+    <body>
+    <main class="bdy2">
         <!-- ================ contact section start ================= -->
-        <section class="contact-section">
+        <br><br>
+        <div class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2 class="contact-title">Get in Touch</h2>
-                    </div>
-                    <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
-                                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center card-box">
+                            <div class="member-card pt-2 pb-2">
+                                <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                                <div class="">
+                                    <h4>I Putu Adi Perdana Utama</h4>
+                                    <p class="text-muted">@Founder <span>| </span><span><a href="#" class="text-pink">webperdagangan</a></span></p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-home"></i></span>
-                            <div class="media-body">
-                                <h3>Buttonwood, California.</h3>
-                                <p>Rosemead, CA 91770</p>
-                            </div>
-                        </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                            <div class="media-body">
-                                <h3>+1 253 565 2365</h3>
-                                <p>Mon to Fri 9am to 6pm</p>
-                            </div>
-                        </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-email"></i></span>
-                            <div class="media-body">
-                                <h3>support@colorlib.com</h3>
-                                <p>Send us your query anytime!</p>
+                                <div class="desc">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                                </div>  
+                                <a href="https://api.whatsapp.com/send?phone=6285804086639"><button type="button" class="btn btn-danger mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button></a>
+                                <br>
+                                <hr>
+                                <ul class="social-network social-circle">
+                                  <li><a href="https://instagram.com/erx.tuadi" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                  <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="text-center card-box">
+                            <div class="member-card pt-2 pb-2">
+                                <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                                <div class="">
+                                    <h4>I Made Dita Yoga Radisa</h4>
+                                    <p class="text-muted">@Programmer <span>| </span><span><a href="#" class="text-pink">webperdagangan</a></span></p>
+                                </div>
+                                <div class="desc">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                                </div>  
+                                <a href="https://api.whatsapp.com/send?phone=6285854323229"><button type="button" class="btn btn-danger mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button></a>
+                                <br>
+                                <hr>
+                                <ul class="social-network social-circle">
+                                  <li><a href="https://instagram.com/dittayoga" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                  <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="text-center card-box">
+                            <div class="member-card pt-2 pb-2">
+                                <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                                <div class="">
+                                    <h4>I Made Adi Wira Surya Kencana</h4>
+                                    <p class="text-muted">@Webdesigner <span>| </span><span><a href="#" class="text-pink">webperdagangan</a></span></p>
+                                </div>
+                                <div class="desc">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                                </div>  
+                                <a href="https://api.whatsapp.com/send?phone=6289697448955"><button type="button" class="btn btn-danger mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button></a>
+                                <br>
+                                <hr>
+                                <ul class="social-network social-circle">
+                                  <li><a href="https://instagram.com/erx.surya" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                  <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
                 </div>
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="text-center card-box">
+                            <div class="member-card pt-2 pb-2">
+                                <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                                <div class="">
+                                    <h4>I Gede Arista Winkayana</h4>
+                                    <p class="text-muted">@Webdesigner <span>| </span><span><a href="#" class="text-pink">webperdagangan</a></span></p>
+                                </div>
+                                <div class="desc">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                                </div>  
+                                <a href="https://api.whatsapp.com/send?phone=6281236034522"><button type="button" class="btn btn-danger mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button></a>
+                                <br><hr>
+                                <ul class="social-network social-circle">
+                                  <li><a href="https://instagram.com/winka_bob" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                  <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="text-center card-box">
+                            <div class="member-card pt-2 pb-2">
+                                <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                                <div class="">
+                                    <h4>Aldi Suryanto</h4>
+                                    <p class="text-muted">@Webdesigner <span>| </span><span><a href="#" class="text-pink">webperdagangan</a></span></p>
+                                </div>
+                                <div class="desc">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                                </div>  
+                                <a href="https://api.whatsapp.com/send?phone=6285851413429"><button type="button" class="btn btn-danger mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button></a>
+                                <br>
+                                <hr>
+                                <ul class="social-network social-circle">
+                                  <li><a href="https://instagram.com/erx.aldi" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                  <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="text-center card-box">
+                            <div class="member-card pt-2 pb-2">
+                                <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                                <div class="">
+                                    <h4>I Putu Ditya Purnama Putra</h4>
+                                    <p class="text-muted">@Webdesigner <span>| </span><span><a href="#" class="text-pink">webperdagangan</a></span></p>
+                                </div>
+                                <div class="desc">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat.</span>
+                                </div>  
+                                <a href="https://api.whatsapp.com/send?phone=6287846053276"><button type="button" class="btn btn-danger mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button></a>
+                                <br>
+                                <hr>
+                                <ul class="social-network social-circle">
+                                  <li><a href="https://instagram.com/diitya_purnama" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                  <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
             </div>
-        </section>
+            <!-- container -->
+        </div>
         <!-- ================ contact section end ================= -->
     </main>
+</body>
     <footer>
         @include('layouts.footer')
     </footer>
