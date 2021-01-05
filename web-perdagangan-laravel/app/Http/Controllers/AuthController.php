@@ -62,6 +62,7 @@ class AuthController extends Controller
     public function logout()
     {
         session()->forget('login');
+        session()->forget('lastSeenProduct');
         Auth::logout();
         return redirect('/');
     }

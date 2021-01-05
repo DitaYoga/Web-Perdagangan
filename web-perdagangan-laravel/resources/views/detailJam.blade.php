@@ -28,7 +28,9 @@
                             </div>
                         </div>
                     <div class="add_to_cart">
-                        <a href="{{ url('cart') }}" onclick="{{ session()->put('lastSeenProduct', $datajam->id )}} " class="btn_3">add to cart</a>
+                        <a href="{{ url('cart') }}" <?php if (session('login') != 'login') {
+                            ?> onclick="{{ session()->put('lastSeenProduct', $datajam->id )}}
+                            <?php } ?> " class="btn_3">add to cart</a>
                     </div>
                     </div>
                 </div>
