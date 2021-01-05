@@ -1,4 +1,4 @@
-    @extends('master')
+@extends('master')
     @section('konten')
     <main>
         <!--================Single Product Area =================-->
@@ -28,7 +28,9 @@
                             </div>
                         </div>
                     <div class="add_to_cart">
-                        <a href="{{ url('add-to-cart/'.$datajam->id) }}" class="btn_3">Add to cart</a>
+                        <a href="{{ url('cart') }}" <?php if (session('login') != 'login') {
+                            ?> onclick="{{ session()->put('lastSeenProduct', $datajam->id )}}
+                            <?php } ?> " class="btn_3">add to cart</a>
                     </div>
                     </div>
                 </div>
