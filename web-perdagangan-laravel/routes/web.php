@@ -18,6 +18,7 @@ use App\Http\Controllers\AuthController;
 
 Route::group(['middleware' => ['auth', 'CheckLevel:user']], function(){
     Route::get('cart', [BerandaController::class, 'cart']);
+    Route::get('add-to-cart/{id}', [BerandaController::class, 'addToCart']);
 });
 
 Route::get('/', [BerandaController::class, 'index']);
