@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2020 at 04:33 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Generation Time: Jan 05, 2021 at 06:25 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -54,9 +55,9 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(10, '2014_10_12_000000_create_users_table', 1),
-(11, '2014_10_12_100000_create_password_resets_table', 1),
-(12, '2019_08_19_000000_create_failed_jobs_table', 1);
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2019_08_19_000000_create_failed_jobs_table', 1);
 
 -- --------------------------------------------------------
 
@@ -117,26 +118,38 @@ INSERT INTO `tb_jam` (`id`, `nama`, `gambar`, `deskripsi`, `harga`, `stok`, `jum
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `tb_petugas`
 --
 
-CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `level` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `tb_petugas` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `id` int(11) NOT NULL,
+  `level` varchar(5) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `tb_user`
 --
 
-INSERT INTO `users` (`id`, `level`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'user', 'dita', 'dita@gmail.com', '$2y$10$AGriAHoClREpAZVpAiM/suK4wztZ8/mrNab/4kYBz5RK4CHlrEzJ.', '2020-11-10 06:55:59', '2020-11-10 06:55:59'),
-(2, 'admin', 'admin', 'admin@gmail.com', '$2y$10$uZ.ytRrGjc2DCDmrPkwVbObZ7bnx.kM8GqxQpG9Y3Ulc5PkJ4xB9i', '2020-11-10 06:57:04', '2020-11-10 06:57:04');
+INSERT INTO `tb_user` (`id`, `level`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
+(2, 'user', 'dita', 'dita@gmail.com', '$2y$10$9/Ljeu3NQYa4zSayhtCBy.SOvNCzkMCJhdjym.aXQUoqlhsWfbPCK', '2020-11-03 21:40:43', '2020-11-03 21:40:43'),
+(3, 'admin', 'admin', 'admin@gmail.com', '$2y$10$HiDSNyAGV8GxxCbFMuwoSuQSQQzZkhfnIJslynGXBr.J.PvBb9CRO', '2020-11-03 21:52:25', '2020-11-03 21:52:25');
 
 --
 -- Indexes for dumped tables
@@ -168,11 +181,16 @@ ALTER TABLE `tb_jam`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indexes for table `tb_petugas`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
+ALTER TABLE `tb_petugas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -188,7 +206,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_jam`
@@ -197,10 +215,16 @@ ALTER TABLE `tb_jam`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `tb_petugas`
 --
-ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `tb_petugas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
