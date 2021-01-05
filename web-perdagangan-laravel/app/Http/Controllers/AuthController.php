@@ -22,7 +22,12 @@ class AuthController extends Controller
         $request->request->add(['level' => 'user']);
         if(Auth::attempt($request->only('name','password','level'))){
             session()->put('login','login');
-            return redirect('/');
+            if (session('lastSeenProduct') != null) {
+                return redirect('/product_details/'.session('lastSeenProduct'));
+            }else{
+                return redirect('/');    
+            }
+            
         } elseif (Auth::attempt($request->only('name','password'))){
             return redirect('/dashboard');
         }
