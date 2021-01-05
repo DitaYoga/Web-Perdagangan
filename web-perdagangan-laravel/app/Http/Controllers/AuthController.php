@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
-use App\Model\User;
+use App\User;
 
 class AuthController extends Controller
 {
@@ -22,12 +22,7 @@ class AuthController extends Controller
         $request->request->add(['level' => 'user']);
         if(Auth::attempt($request->only('name','password','level'))){
             session()->put('login','login');
-            if (session('lastSeenProduct') != null) {
-                return redirect('/product_details/'.session('lastSeenProduct'));
-            }else{
-                return redirect('/');    
-            }
-            
+            return redirect('/');
         } elseif (Auth::attempt($request->only('name','password'))){
             return redirect('/dashboard');
         }
@@ -62,7 +57,6 @@ class AuthController extends Controller
     public function logout()
     {
         session()->forget('login');
-        session()->forget('lastSeenProduct');
         Auth::logout();
         return redirect('/');
     }

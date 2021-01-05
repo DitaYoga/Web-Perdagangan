@@ -1,0 +1,11 @@
+buat 1 form untuk memesan tiket bus yang bisa menerima input nama pemebeli, dan no hp.
+
+memilih halte awal dan halte tujuan dengan 10 halte, halte a sampai halte j.
+
+terdaapat 2 jenis tiket, yaitu tiket standar dan eksekutif. untuk harga tiket eksekutif adalah 2 kali harga tiket standar, dengan diskon 20%. harga tiket standar untuk dewasa 200.000, anak-anak 100.000
+
+setiap pembeli dapat membeli lebih dari satu tiket 
+
+pembeli bisa memilih berupa asuransi harganya 70.000 untuk 1 kali transaksi
+
+form aplikasi bisa menampilkan data tiket pesanan dan total harga yang harus di bayar oleh pembeli dalam sebuah text area, ketika tombol proses ditekan
